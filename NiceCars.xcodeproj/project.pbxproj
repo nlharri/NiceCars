@@ -15,6 +15,9 @@
 		4B1EDC0021E3C7310035C6AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B1EDBFE21E3C7310035C6AB /* Main.storyboard */; };
 		4B1EDC0221E3C7330035C6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1EDC0121E3C7330035C6AB /* Assets.xcassets */; };
 		4B1EDC0521E3C7330035C6AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B1EDC0321E3C7330035C6AB /* LaunchScreen.storyboard */; };
+		4B23148F21E3CA560064CB65 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 4B23148E21E3CA550064CB65 /* Fonts */; };
+		4B23149221E3CAA00064CB65 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B23149021E3CAA00064CB65 /* Nunito-SemiBold.ttf */; };
+		4B23149321E3CAA00064CB65 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B23149121E3CAA00064CB65 /* OpenSans-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		4B1EDC0121E3C7330035C6AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B1EDC0421E3C7330035C6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B1EDC0621E3C7330035C6AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B23148E21E3CA550064CB65 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = NiceCars/Fonts; sourceTree = SOURCE_ROOT; };
+		4B23149021E3CAA00064CB65 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		4B23149121E3CAA00064CB65 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,10 @@
 		4B1EDBF321E3C7310035C6AB /* NiceCars */ = {
 			isa = PBXGroup;
 			children = (
+				4B23148D21E3C9150064CB65 /* Actions */,
+				4B23148C21E3C90F0064CB65 /* Scenes */,
+				4B23148B21E3C9080064CB65 /* Fonts */,
 				4B1EDBF421E3C7310035C6AB /* AppDelegate.swift */,
-				4B1EDBF621E3C7310035C6AB /* GameScene.sks */,
-				4B1EDBF821E3C7310035C6AB /* Actions.sks */,
 				4B1EDBFA21E3C7310035C6AB /* GameScene.swift */,
 				4B1EDBFC21E3C7310035C6AB /* GameViewController.swift */,
 				4B1EDBFE21E3C7310035C6AB /* Main.storyboard */,
@@ -71,6 +78,32 @@
 				4B1EDC0621E3C7330035C6AB /* Info.plist */,
 			);
 			path = NiceCars;
+			sourceTree = "<group>";
+		};
+		4B23148B21E3C9080064CB65 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4B23149021E3CAA00064CB65 /* Nunito-SemiBold.ttf */,
+				4B23149121E3CAA00064CB65 /* OpenSans-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4B23148C21E3C90F0064CB65 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4B1EDBF621E3C7310035C6AB /* GameScene.sks */,
+				4B23148E21E3CA550064CB65 /* Fonts */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4B23148D21E3C9150064CB65 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				4B1EDBF821E3C7310035C6AB /* Actions.sks */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +164,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B23149221E3CAA00064CB65 /* Nunito-SemiBold.ttf in Resources */,
 				4B1EDC0021E3C7310035C6AB /* Main.storyboard in Resources */,
+				4B23149321E3CAA00064CB65 /* OpenSans-Light.ttf in Resources */,
 				4B1EDBF721E3C7310035C6AB /* GameScene.sks in Resources */,
 				4B1EDC0221E3C7330035C6AB /* Assets.xcassets in Resources */,
+				4B23148F21E3CA560064CB65 /* Fonts in Resources */,
 				4B1EDC0521E3C7330035C6AB /* LaunchScreen.storyboard in Resources */,
 				4B1EDBF921E3C7310035C6AB /* Actions.sks in Resources */,
 			);
