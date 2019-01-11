@@ -18,6 +18,7 @@
 		4B23148F21E3CA560064CB65 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 4B23148E21E3CA550064CB65 /* Fonts */; };
 		4B23149221E3CAA00064CB65 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B23149021E3CAA00064CB65 /* Nunito-SemiBold.ttf */; };
 		4B23149321E3CAA00064CB65 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B23149121E3CAA00064CB65 /* OpenSans-Light.ttf */; };
+		4BBFFEC021E8617C0039870B /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4BBFFEBF21E8617C0039870B /* MainMenu.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4B23148E21E3CA550064CB65 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = NiceCars/Fonts; sourceTree = SOURCE_ROOT; };
 		4B23149021E3CAA00064CB65 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		4B23149121E3CAA00064CB65 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		4BBFFEBF21E8617C0039870B /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				4B1EDBF621E3C7310035C6AB /* GameScene.sks */,
 				4B23148E21E3CA550064CB65 /* Fonts */,
+				4BBFFEBF21E8617C0039870B /* MainMenu.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B23149221E3CAA00064CB65 /* Nunito-SemiBold.ttf in Resources */,
+				4BBFFEC021E8617C0039870B /* MainMenu.sks in Resources */,
 				4B1EDC0021E3C7310035C6AB /* Main.storyboard in Resources */,
 				4B23149321E3CAA00064CB65 /* OpenSans-Light.ttf in Resources */,
 				4B1EDBF721E3C7310035C6AB /* GameScene.sks in Resources */,

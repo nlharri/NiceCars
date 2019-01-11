@@ -19,9 +19,43 @@ class GameScene: SKScene {
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//NICECarsLabel") as? SKLabelNode
-        if let label = self.label {
+        self.carSilhouetteNode = SKShapeNode.init(rectOf: CGSize.init(width: 100, height: 100))
+        if let label = self.label,
+           let carSilhouetteNode = self.carSilhouetteNode {
+            
+            // init car silhouette logo
+            carSilhouetteNode.position.x = 0
+            carSilhouetteNode.position.y = 480
+            carSilhouetteNode.setScale(CGFloat(2.5))
+            carSilhouetteNode.lineWidth = 0
+            carSilhouetteNode.fillColor = SKColor.white
+            carSilhouetteNode.fillTexture = SKTexture.init(image: UIImage(named: "CarSilhouette")!)
+            self.addChild(carSilhouetteNode)
+            carSilhouetteNode.alpha = 0.0
+            
+            // Init label
             label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
+            
+            // init actions
+            let fadeInAction = SKAction.fadeIn(withDuration: 3.0)
+            let moveToCenterAction = SKAction.moveBy(x: 0, y: -320, duration: 3.0)
+            let waitAction = SKAction.wait(forDuration: 3.0)
+            let fadeOutAction = SKAction.fadeOut(withDuration: 3.0)
+            let moveToBottomAction = SKAction.moveBy(x: 0, y: -320, duration: 3.0)
+            
+            let fadeInAndMoveToCenterAction = SKAction.group([fadeInAction,
+                                                      moveToCenterAction])
+            let fadeOutAndMoveToBottomAction = SKAction.group([fadeOutAction,
+                                                               moveToBottomAction])
+            
+            // build init animation action
+            let initAnimationAction = SKAction.sequence([fadeInAndMoveToCenterAction,
+                                                         waitAction,
+                                                         fadeOutAndMoveToBottomAction])
+            
+            // set action for both the logo and the label
+            carSilhouetteNode.run(initAnimationAction)
+            label.run(initAnimationAction)
         }
 
         /*
@@ -37,8 +71,7 @@ class GameScene: SKScene {
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
         }*/
-        
-        self.carSilhouetteNode = SKShapeNode.init(rectOf: CGSize.init(width: 100, height: 100))
+        /*
         if let carSilhouetteNode = self.carSilhouetteNode {
             carSilhouetteNode.position.x = 0
             carSilhouetteNode.position.y = 480
@@ -49,7 +82,7 @@ class GameScene: SKScene {
             self.addChild(carSilhouetteNode)
             carSilhouetteNode.alpha = 0.0
             carSilhouetteNode.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        }*/
     }
     
     
