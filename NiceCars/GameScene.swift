@@ -11,6 +11,10 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    private var animDelay : Int {
+        return 5 // for testing purposes
+    }
+    
     private var label : SKLabelNode?
     private var carSilhouetteNode : SKShapeNode?
     //private var spinnyNode : SKShapeNode?
@@ -37,11 +41,11 @@ class GameScene: SKScene {
             label.alpha = 0.0
             
             // init actions
-            let fadeInAction = SKAction.fadeIn(withDuration: 3.0)
-            let moveToCenterAction = SKAction.moveBy(x: 0, y: -320, duration: 3.0)
-            let waitAction = SKAction.wait(forDuration: 3.0)
-            let fadeOutAction = SKAction.fadeOut(withDuration: 3.0)
-            let moveToBottomAction = SKAction.moveBy(x: 0, y: -320, duration: 3.0)
+            let fadeInAction = SKAction.fadeIn(withDuration: 2.0)
+            let moveToCenterAction = SKAction.moveBy(x: 0, y: -320, duration: 2.0)
+            let waitAction = SKAction.wait(forDuration: 2.0)
+            let fadeOutAction = SKAction.fadeOut(withDuration: 1.0)
+            let moveToBottomAction = SKAction.moveBy(x: 0, y: -320, duration: 1.0)
             
             let fadeInAndMoveToCenterAction = SKAction.group([fadeInAction,
                                                       moveToCenterAction])
@@ -56,11 +60,13 @@ class GameScene: SKScene {
             // set action for both the logo and the label
             carSilhouetteNode.run(initAnimationAction)
             label.run(initAnimationAction)
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(animDelay), execute: {
                 if let mainMenuScene = SKScene(fileNamed: "MainMenu") {
-                    let reveal = SKTransition.reveal(with: .down, duration: 1)
+                    mainMenuScene.scaleMode = .aspectFill
+                    //let reveal = SKTransition.reveal(with: .down, duration: 1.0)
+                    let flipHorizontal = SKTransition.flipVertical(withDuration: 0.7)
                     if let mainView = self.view {
-                        mainView.presentScene(mainMenuScene, transition: reveal)
+                        mainView.presentScene(mainMenuScene, transition: flipHorizontal)
                     }
                 }
             })
