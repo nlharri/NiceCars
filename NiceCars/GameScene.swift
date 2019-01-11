@@ -56,6 +56,14 @@ class GameScene: SKScene {
             // set action for both the logo and the label
             carSilhouetteNode.run(initAnimationAction)
             label.run(initAnimationAction)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
+                if let mainMenuScene = SKScene(fileNamed: "MainMenu") {
+                    let reveal = SKTransition.reveal(with: .down, duration: 1)
+                    if let mainView = self.view {
+                        mainView.presentScene(mainMenuScene, transition: reveal)
+                    }
+                }
+            })
         }
 
         /*
