@@ -14,6 +14,7 @@ class MainMenu: SKScene {
     private var niceCarsLabel: SKLabelNode?
     private var niceCarsLogoWithLabel: SKNode?
     private var carSilhouetteNode: SKShapeNode?
+    private var menuArea: SKNode?
     
     override func didMove(to view: SKView) {
         self.niceCarsLogoWithLabel = self.childNode(withName: "//NiceCarsLogoWithLabel")
@@ -39,6 +40,46 @@ class MainMenu: SKScene {
             logoWithLabel.run(SKAction.group([fadeInAction,
                                               scaleAction]))
         }
+    
+        // initialize menu
+        self.menuArea = self.childNode(withName: "//MenuArea")
+        if let menuArea = self.menuArea {
+            let menuButtonBMW = MainMenuButton.init()
+            let menuButtonMercedes = MainMenuButton.init()
+            let menuButtonLexus = MainMenuButton.init()
+            let menuButtonAudi = MainMenuButton.init()
+            
+            menuButtonBMW.position = CGPoint.init(x: 0, y: 390)
+            menuButtonBMW.alpha = 0.0
+            menuButtonBMW.setScale(0.0)
+            menuButtonMercedes.position = CGPoint.init(x: 0, y: 133)
+            menuButtonMercedes.alpha = 0.0
+            menuButtonMercedes.setScale(0.0)
+            menuButtonLexus.position = CGPoint.init(x: 0, y: -133)
+            menuButtonLexus.alpha = 0.0
+            menuButtonLexus.setScale(0.0)
+            menuButtonAudi.position = CGPoint.init(x: 0, y: -390)
+            menuButtonAudi.alpha = 0.0
+            menuButtonAudi.setScale(0.0)
+
+            menuArea.addChild(menuButtonBMW)
+            menuArea.addChild(menuButtonMercedes)
+            menuArea.addChild(menuButtonLexus)
+            menuArea.addChild(menuButtonAudi)
+
+            let fadeInAction = SKAction.fadeIn(withDuration: 0.7)
+            let scaleAction = SKAction.scale(to: 1.0, duration: 0.7)
+            menuButtonBMW.run(SKAction.group([fadeInAction,
+                                              scaleAction]))
+            menuButtonMercedes.run(SKAction.group([fadeInAction,
+                                              scaleAction]))
+            menuButtonLexus.run(SKAction.group([fadeInAction,
+                                              scaleAction]))
+            menuButtonAudi.run(SKAction.group([fadeInAction,
+                                              scaleAction]))
+        }
     }
+    
+    
 }
 

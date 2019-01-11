@@ -18,6 +18,7 @@
 		4B23148F21E3CA560064CB65 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 4B23148E21E3CA550064CB65 /* Fonts */; };
 		4B23149221E3CAA00064CB65 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B23149021E3CAA00064CB65 /* Nunito-SemiBold.ttf */; };
 		4B23149321E3CAA00064CB65 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B23149121E3CAA00064CB65 /* OpenSans-Light.ttf */; };
+		4B8B229B21E90ECD0012E753 /* MainMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8B229A21E90ECD0012E753 /* MainMenuButton.swift */; };
 		4B8B8FFF21E8825600DB9CE3 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8B8FFE21E8825600DB9CE3 /* MainMenu.swift */; };
 		4BBFFEC021E8617C0039870B /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4BBFFEBF21E8617C0039870B /* MainMenu.sks */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		4B23148E21E3CA550064CB65 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = NiceCars/Fonts; sourceTree = SOURCE_ROOT; };
 		4B23149021E3CAA00064CB65 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		4B23149121E3CAA00064CB65 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		4B8B229A21E90ECD0012E753 /* MainMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuButton.swift; sourceTree = "<group>"; };
 		4B8B8FFE21E8825600DB9CE3 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		4BBFFEBF21E8617C0039870B /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				4B1EDC0321E3C7330035C6AB /* LaunchScreen.storyboard */,
 				4B1EDC0621E3C7330035C6AB /* Info.plist */,
 				4B8B8FFE21E8825600DB9CE3 /* MainMenu.swift */,
+				4B8B229A21E90ECD0012E753 /* MainMenuButton.swift */,
 			);
 			path = NiceCars;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B1EDBFB21E3C7310035C6AB /* GameScene.swift in Sources */,
+				4B8B229B21E90ECD0012E753 /* MainMenuButton.swift in Sources */,
 				4B1EDBFD21E3C7310035C6AB /* GameViewController.swift in Sources */,
 				4B1EDBF521E3C7310035C6AB /* AppDelegate.swift in Sources */,
 				4B8B8FFF21E8825600DB9CE3 /* MainMenu.swift in Sources */,
