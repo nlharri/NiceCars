@@ -14,7 +14,27 @@ class MainMenuButton: SKSpriteNode {
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         super.init(texture: texture, color: color, size: size)
         self.size = CGSize.init(width: 600.0, height: 200.0)
-        self.color = .white
+        self.color = SKColor.white
+        
+        let innerNode = SKSpriteNode(
+            texture: SKTexture.init(image: UIImage(named: "BMWLogo")!),
+            color:   SKColor.clear,
+            size:    CGSize.init(width: 200.0, height: 200.0)
+        )
+        innerNode.zPosition = 2
+
+        let effectNode = SKEffectNode()
+        effectNode.shouldRasterize = true
+        effectNode.addChild(SKSpriteNode(
+            texture: self.texture,
+            color:   self.color,
+            size:    self.size
+        ))
+        effectNode.zPosition = 1
+        effectNode.filter = CIFilter(name: "CIGaussianBlur", parameters: ["inputRadius":50])
+        effectNode.alpha = 0.7
+        self.addChild(effectNode)
+        self.addChild(innerNode)
     }
     
     required init?(coder aDecoder: NSCoder) {

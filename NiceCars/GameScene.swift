@@ -12,7 +12,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     private var animDelay : Int {
-        return 5 //5 // for testing purposes
+        return 1 //5 // for testing purposes
     }
     
     private var label : SKLabelNode?
